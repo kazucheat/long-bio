@@ -47,7 +47,7 @@ SERVERS = {
 
 FREEFIRE_UPDATE_URL = "https://client.ind.freefiremobile.com/UpdateSocialBasicInfo"
 MAJOR_LOGIN_URL = "https://loginbp.ppmainecoonghj.com/MajorLogin"
-OAUTH_URL = "https://jwt-token-api-tawny.vercel.app/oauth/guest/token/grant"
+OAUTH_URL = "https://100067.connect.garena.com/oauth/guest/token/grant"
 FREEFIRE_VERSION = "OB55"
 
 BIO_HEADERS = {
@@ -136,7 +136,7 @@ def get_jwt_from_api(uid=None, password=None, access_token=None):
 
     if uid and password:
         try:
-            oauth_url = "https://jwt-token-api-tawny.vercel.app/oauth/guest/token/grant"
+            oauth_url = "https://100067.connect.garena.com/oauth/guest/token/grant"
             payload = {
                 'uid': uid, 'password': password, 'response_type': "token",
                 'client_type': "2", 'client_secret': "2ee44819e9b4598845141067b281621874d0d5d7af9d8f7e00c1e54715b7d1e3",
@@ -171,7 +171,7 @@ def get_jwt_from_api(uid=None, password=None, access_token=None):
                 game_data.timestamp = "2024-12-05 18:15:32"
                 game_data.game_name = "free fire"
                 game_data.game_version = 1
-                game_data.version_code = "1.130.1"
+                game_data.version_code = "1.132.1"
                 game_data.os_info = "Android OS 9 / API-28"
                 game_data.device_type = "Handheld"
                 game_data.network_provider = "Verizon Wireless"
@@ -269,7 +269,7 @@ def perform_major_login(access_token, open_id):
             game_data.timestamp = "2024-12-05 18:15:32"
             game_data.game_name = "free fire"
             game_data.game_version = 1
-            game_data.version_code = "1.130.1"
+            game_data.version_code = "1.132.1"
             game_data.os_info = "Android OS 9 / API-28 (PI/rel.cjw.20220518.114133)"
             game_data.device_type = "Handheld"
             game_data.network_provider = "Verizon Wireless"

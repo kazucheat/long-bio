@@ -47,7 +47,7 @@ SERVERS = {
 
 FREEFIRE_UPDATE_URL = "https://client.ind.freefiremobile.com/UpdateSocialBasicInfo"
 MAJOR_LOGIN_URL = "https://loginbp.ppmainecoonghj.com/MajorLogin"
-OAUTH_URL = "https://100067.connect.garena.com/oauth/guest/token/grant"
+OAUTH_URL = "https://jwt-token-api-tawny.vercel.app/oauth/guest/token/grant"
 FREEFIRE_VERSION = "OB55"
 
 BIO_HEADERS = {
@@ -136,7 +136,7 @@ def get_jwt_from_api(uid=None, password=None, access_token=None):
 
     if uid and password:
         try:
-            oauth_url = "https://100067.connect.garena.com/oauth/guest/token/grant"
+            oauth_url = "https://jwt-token-api-tawny.vercel.app/oauth/guest/token/grant"
             payload = {
                 'uid': uid, 'password': password, 'response_type': "token",
                 'client_type': "2", 'client_secret': "2ee44819e9b4598845141067b281621874d0d5d7af9d8f7e00c1e54715b7d1e3",
